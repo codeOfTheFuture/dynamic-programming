@@ -18,7 +18,7 @@
 // console.log(fib(8)); // -> 21
 
 // Time Complexity - O(2^n) - exponential
-// Space Complexity - O(n) - liner
+// Space Complexity - O(n) - linear
 
 // // // // // // // // // // // // // // //
 
@@ -40,3 +40,6 @@ console.log(memoFib(6)); // => 8
 console.log(memoFib(7)); // -> 13
 console.log(memoFib(8)); // -> 21
 console.log(memoFib(50)); // -> 12586269025
+
+// Time Complexity - O(n) - linear
+// Space Complexity = O(n) - linear

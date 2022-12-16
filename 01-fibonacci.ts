@@ -29,7 +29,7 @@ interface Memo {
   [n: number]: number;
 }
 
-const memoFib = (n: number, memo = {} as Memo) => {
+const memoFib = (n: number, memo = {} as Memo): number => {
   if (n in memo) return memo[n];
   if (n <= 2) return 1;
   memo[n] = memoFib(n - 1, memo) + memoFib(n - 2, memo);

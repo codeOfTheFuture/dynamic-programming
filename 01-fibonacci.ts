@@ -25,11 +25,11 @@
 // Memoized recursive implementation
 //  js object, keys will be arg to fn, value return value
 
-interface Memo {
+interface Memo1 {
   [n: number]: number;
 }
 
-const memoFib = (n: number, memo = {} as Memo): number => {
+const memoFib = (n: number, memo: Memo1 = {}) => {
   if (n in memo) return memo[n];
   if (n <= 2) return 1;
   memo[n] = memoFib(n - 1, memo) + memoFib(n - 2, memo);

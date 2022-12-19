@@ -4,7 +4,7 @@
 
 // Write a function `gridTraveler(m, n)` that calculates this.
 
-// Classic recursive implementation
+// Brute force implementation
 // const gridTraveler = (m: number, n: number): number => {
 //   if (m === 1 && n === 1) return 1;
 //   if (m === 0 || n === 0) return 0;
@@ -25,11 +25,11 @@
 
 // Memoized recursive implementation
 
-interface Memo {
+interface Memo2 {
   [key: string]: number;
 }
 
-const gridTraveler = (m: number, n: number, memo: Memo = {}): number => {
+const gridTraveler = (m: number, n: number, memo: Memo2 = {}) => {
   const key = m + "," + n;
 
   if (key in memo) return memo[key];

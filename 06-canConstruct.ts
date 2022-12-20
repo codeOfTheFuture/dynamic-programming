@@ -36,8 +36,8 @@ const canConstruct = (target: string, wordBank: string[], memo: Memo6 = {}) => {
 // Memoized
 // m = target.length
 // n = wordBank.length
-// time: O(n * m^2)
-// space: O(m^2)
+// time: O(n * m^2) - Quadratic
+// space: O(m^2) - Quadratic
 
 console.log(canConstruct("abcdef", ["ab", "abc", "cd", "def", "abcd"])); // true
 console.log(

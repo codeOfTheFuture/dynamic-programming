@@ -18,11 +18,7 @@ const bestSum = (targetSum: number, numbers: number[], memo: Memo5 = {}) => {
 
   for (let num of numbers) {
     const remainder = targetSum - num;
-    const remainderCombination: number[] | null = bestSum(
-      remainder,
-      numbers,
-      memo
-    );
+    const remainderCombination = bestSum(remainder, numbers, memo);
 
     if (remainderCombination !== null) {
       const combination: number[] = [...remainderCombination, num];
@@ -47,7 +43,11 @@ const bestSum = (targetSum: number, numbers: number[], memo: Memo5 = {}) => {
 // time: O(n^m * m) - Exponential
 // space: O(m^2) - Quadratic
 
+// Memoized
+// time: O(m^2 * n) - Quadratic
+// space: O(m^2) - Quadratic
+
 console.log(bestSum(7, [5, 3, 4, 7])); // [7]
 console.log(bestSum(8, [2, 3, 5])); // [3, 5]
 console.log(bestSum(8, [1, 4, 5])); // [4, 4]
-// console.log(bestSum(100, [1, 2, 5, 25])); // [25, 25, 25, 25]
+console.log(bestSum(100, [1, 2, 5, 25])); // [25, 25, 25, 25]

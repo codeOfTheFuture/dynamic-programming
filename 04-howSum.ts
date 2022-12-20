@@ -40,7 +40,7 @@ const howSum = (targetSum: number, numbers: number[], memo: Memo4 = {}) => {
 
   for (let num of numbers) {
     const remainder = targetSum - num;
-    const remainderResult = howSum(remainder, numbers);
+    const remainderResult = howSum(remainder, numbers, memo);
 
     if (remainderResult !== null) {
       memo[targetSum] = [...remainderResult, num];
@@ -54,7 +54,7 @@ const howSum = (targetSum: number, numbers: number[], memo: Memo4 = {}) => {
 
 // m = target sum
 // n = numbers.length
-// Time Complexity - O(n*m^2) - Quadratic
+// Time Complexity - O(n * m^2) - Quadratic
 // Space Complexity - O(m^2) - Quadratic
 
 console.log(howSum(5, [2, 3])); // [3, 2, 2]
